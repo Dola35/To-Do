@@ -4,3 +4,29 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+
+.task {
+  border: 1px solid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.task-input {
+  width: 700px;
+}
+
+.bi-check-square {
+  color: green;
+}
+
+.bi-hand-thumbs-up {
+  color: green;
+}
+
+.bi-trash3-fill {
+  color: red;
+}
