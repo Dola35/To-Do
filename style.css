@@ -7,20 +7,47 @@
 
 .task {
   border: 1px solid;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 1%;
   width: 70%;
   margin: auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  background-color: #f1f1f1;
+}
+
+.task-container-left {
+  display: flex;
+  justify-content: flex-start;
+  width: 70%;
+}
+
+.task-container-right {
+  display: flex;
+  justify-content: flex-end;
+  width: 30%;
 }
 
 .task-input {
-  width: 700px;
+  width: 90%;
+  margin-left: 3%;
+  padding-left: 2%;
+  font-size: 1.3em;
+  border-radius: 10px;
+  border: 1px #606470 solid;
+}
+
+.right-icon {
+  margin-left: 3%;
 }
 
 .bi-check-square {
   color: green;
+}
+
+.bi-pencil-square,
+.bi-arrow-up-circle-fill,
+.bi-arrow-down-circle-fill {
+  color: #3c4245;
 }
 
 .bi-hand-thumbs-up {
