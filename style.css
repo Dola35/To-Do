@@ -8,12 +8,11 @@
 .task-input-container {
   display: flex;
   width: 70%;
-  margin: auto;
+  margin: 2% auto;
   padding: 1.5% 0;
   justify-content: center;
   background-color: #f1f1f1;
   border: 1px #606470 solid;
-  border-bottom: none;
 }
 
 .task-input {
@@ -32,12 +31,13 @@
 
 .task {
   padding: 1%;
-  width: 70%;
+  width: 50%;
   margin: auto;
   display: flex;
   justify-content: center;
   background-color: #ffffff;
   border: 1px #606470 solid;
+  border-radius: 10px;
 }
 
 .task-list {
