@@ -11,8 +11,8 @@
   margin: 1% auto;
   padding: 1.5% 0;
   justify-content: center;
-  background-color: #f1f1f1;
-  border: 1px #606470 solid;
+  background-color: #bfdce6;
+  border: 1px rgb(11, 113, 179) solid;
   border-radius: 10px;
 }
 
@@ -37,7 +37,7 @@
   display: flex;
   justify-content: center;
   background-color: #ffffff;
-  border: 1px #606470 solid;
+  border: 1px rgb(11, 113, 179) solid;
   border-radius: 10px;
 }
 
@@ -67,11 +67,11 @@
 .bi-pencil-square,
 .bi-arrow-up-circle-fill,
 .bi-arrow-down-circle-fill {
-  color: #3c4245;
+  color: rgb(11, 113, 179);
 }
 
 .bi-trash3-fill {
-  color: red;
+  color: #aa0000;
 }
 
 @media only screen and (max-width: 850px) {
