@@ -5,35 +5,54 @@
   font-family: "Roboto", sans-serif;
 }
 
-.task {
-  border: 1px solid;
-  padding: 1%;
+.task-input-container {
+  display: flex;
   width: 70%;
   margin: auto;
-  display: flex;
-  justify-content: space-between;
+  padding: 1.5% 0;
+  justify-content: center;
   background-color: #f1f1f1;
-}
-
-.task-container-left {
-  display: flex;
-  justify-content: flex-start;
-  width: 70%;
-}
-
-.task-container-right {
-  display: flex;
-  justify-content: flex-end;
-  width: 30%;
+  border: 1px #606470 solid;
+  border-bottom: none;
 }
 
 .task-input {
-  width: 90%;
-  margin-left: 3%;
+  width: 70%;
+  height: 2em;
   padding-left: 2%;
   font-size: 1.3em;
   border-radius: 10px;
   border: 1px #606470 solid;
+}
+
+.bi-hand-thumbs-up {
+  color: green;
+  margin-left: 2%;
+}
+
+.task {
+  padding: 1%;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffffff;
+  border: 1px #606470 solid;
+}
+
+.task-list {
+  padding-left: 0%;
+}
+
+.added-task {
+  width: 40%;
+  font-size: larger;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 30%;
 }
 
 .right-icon {
@@ -48,10 +67,6 @@
 .bi-arrow-up-circle-fill,
 .bi-arrow-down-circle-fill {
   color: #3c4245;
-}
-
-.bi-hand-thumbs-up {
-  color: green;
 }
 
 .bi-trash3-fill {
