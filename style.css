@@ -4,7 +4,8 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Indie+Flower&display=swap');
 
 .navbar{
   width: 100%;
@@ -15,9 +16,16 @@
   justify-content: space-between;
 }
 #h2{
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Alfa Slab One', cursive;
   text-align: center;
+  text-transform: uppercase;
 } 
+#h2 p{
+  text-transform:capitalize ;
+  padding-top: 10px;
+  font-family: 'Indie Flower' , cursive;
+
+}
 
 #logo{
   height: 60px;
