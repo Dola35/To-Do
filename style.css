@@ -8,30 +8,31 @@
 .task-input-container {
   display: flex;
   width: 70%;
-  margin: 2% auto;
+  margin: 1% auto;
   padding: 1.5% 0;
   justify-content: center;
   background-color: #f1f1f1;
   border: 1px #606470 solid;
+  border-radius: 10px;
 }
 
 .task-input {
   width: 70%;
-  padding-left: 2%;
+  padding: 1%;
   font-size: 1.3em;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px #606470 solid;
 }
 
 .bi-hand-thumbs-up {
   color: green;
   margin-left: 2%;
-  flex-shrink: 1;
+  flex-shrink: 0;
 }
 
 .task {
   padding: 1%;
-  width: 50%;
+  width: 70%;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -45,8 +46,8 @@
 }
 
 .added-task {
-  width: 30%;
-  font-size: 1.3em;
+  width: 50%;
+  font-size: 1.4em;
 }
 
 .icon-container {
@@ -71,4 +72,33 @@
 
 .bi-trash3-fill {
   color: red;
+}
+
+@media only screen and (max-width: 850px) {
+  .task-input-container {
+    padding: 2%;
+  }
+
+  .task-input {
+    font-size: 0.8em;
+  }
+
+  .task {
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+  }
+
+  .added-task {
+    width: 70%;
+    font-size: 1.4em;
+    padding-bottom: 2%;
+    text-align: center;
+  }
+
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
 }
