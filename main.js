@@ -22,6 +22,13 @@ function removeTaskBar() {
   /* removeEventListener; */
 }
 
+function markAsDone(){
+  const taskDone = this.parentNode;
+  taskDone.parentNode.style.backgroundColor = "lightgreen";
+}
+
+
+
 function alertArrowButton() {
   alert(
     "We're still working on this feature! Please give us a couple more weeks of bootcamp to figure this one out."
@@ -45,7 +52,7 @@ document.getElementById("add-task").onclick = function () {
                 width="10%"
                 height="100%"
                 fill="currentColor"
-                class="bi bi-check-square"
+                class="done-button bi bi-check-square"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -123,5 +130,13 @@ document.getElementById("add-task").onclick = function () {
     const downButtons = document.getElementsByClassName("down-button");
     const downButtonsArray = Array.from(downButtons);
     downButtonsArray.forEach((button) => (button.onclick = alertArrowButton));
+
+
+    const doneButtons = document.getElementsByClassName("done-button");
+    const doneButtonsArray = Array.from(doneButtons);
+    doneButtonsArray.forEach((button) => (button.onclick=markAsDone));
+
+
+
   }
 };
