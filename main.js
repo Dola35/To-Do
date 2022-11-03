@@ -1,8 +1,8 @@
 document.getElementById("add-task").onclick = function () {
-  /*if (document.getElementById("task-input-container").value.length == 0) {
+  if (document.getElementById("task-input").value.length === 0) {
     alert("Please Enter a Task");
-  } else { */
-  document.querySelector(".task-list").innerHTML += `
+  } else {
+    document.querySelector(".task-list").innerHTML += `
           <li class="task">
             <span class="added-task"></span>
             <div class="icon-container">
@@ -71,4 +71,5 @@ document.getElementById("add-task").onclick = function () {
               </svg>
             </div>
           </li>`;
+  }
 };
