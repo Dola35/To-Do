@@ -1,10 +1,12 @@
 document.getElementById("add-task").onclick = function () {
-  if (document.getElementById("task-input").value.length === 0) {
+  if (document.getElementById("new-task-input").value.length === 0) {
     alert("Please Enter a Task");
   } else {
     document.querySelector(".task-list").innerHTML += `
           <li class="task">
-            <span class="added-task"></span>
+          <span class="added-task">${
+            document.getElementById("new-task-input").value
+          }</span>
             <div class="icon-container">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -71,5 +73,6 @@ document.getElementById("add-task").onclick = function () {
               </svg>
             </div>
           </li>`;
+    addEventListener;
   }
 };
