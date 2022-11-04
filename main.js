@@ -23,8 +23,8 @@ function removeTaskBar() {
 }
 //markAsDone function
 function markAsDone() {
-  const taskDone = this.parentNode;
-  taskDone.parentNode.style.backgroundColor = "lightgreen";
+  const taskDone = this.parentNode.parentNode;
+  taskDone.style.backgroundColor = "lightgreen";
 }
 //end of the markAsDone function
 
@@ -36,6 +36,41 @@ function alertArrowButton() {
   /* removeEventListener; */
 }
 
+function enterKeyToSave(event) {
+  const key = event.key;
+  if (key === "Enter") {
+    const textInput = event.target.value;
+    const spanParent = event.target.parentNode;
+    spanParent.removeChild(event.target);
+    spanParent.innerText = textInput;
+    spanParent.style.fontSize = "1.4em";
+  }
+}
+
+function editTask() {
+  const taskField =
+    this.parentNode.parentNode.getElementsByClassName("task-field")[0];
+  const taskFieldParent = taskField.parentNode;
+  taskFieldParent.removeChild(taskField);
+
+  node = document.createElement("span");
+  node.class = "task-field";
+  node.style.width = "50%";
+
+  inputnode = document.createElement("input");
+  inputnode.type = "text";
+  inputnode.placeholder = "Edit your task here ...";
+  inputnode.class = "modified-task-input";
+  inputnode.style.width = "100%";
+  inputnode.style.fontSize = "1.4em";
+  inputnode.style.paddingLeft = "1%";
+  inputnode.style.border = "1px #606470 solid";
+  node.appendChild(inputnode);
+  taskFieldParent.prepend(node);
+
+  inputnode.onkeypress = enterKeyToSave;
+}
+
 document.getElementById("add-task").onclick = function () {
   if (
     document.getElementById("new-task-input").value.length === 0 ||
@@ -45,7 +80,7 @@ document.getElementById("add-task").onclick = function () {
   } else {
     document.querySelector(".task-list").innerHTML += `
           <li class="task">
-          <span class="added-task">${
+          <span class="task-field">${
             document.getElementById("new-task-input").value
           }</span>
             <div class="icon-container">
@@ -69,7 +104,7 @@ document.getElementById("add-task").onclick = function () {
                 width="10%"
                 height="100%"
                 fill="currentColor"
-                class="bi bi-pencil-square right-icon"
+                class="edit-button bi bi-pencil-square right-icon"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -120,7 +155,6 @@ document.getElementById("add-task").onclick = function () {
             </div>
           </li>`;
 
-    const numOfTasks = document.getElementsByClassName("task").length;
     const deleteButtons = document.getElementsByClassName("delete-button");
     const deleteButtonsArray = Array.from(deleteButtons);
     deleteButtonsArray.forEach((button) => (button.onclick = removeTaskBar));
@@ -138,5 +172,9 @@ document.getElementById("add-task").onclick = function () {
     const doneButtonsArray = Array.from(doneButtons);
     doneButtonsArray.forEach((button) => (button.onclick = markAsDone));
     // end of the markAsDone button
+
+    const editButtons = document.getElementsByClassName("edit-button");
+    const editButtonsArray = Array.from(editButtons);
+    editButtonsArray.forEach((button) => (button.onclick = editTask));
   }
 };

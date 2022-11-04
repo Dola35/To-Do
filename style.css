@@ -74,10 +74,23 @@ main {
   border: 1px #606470 solid;
 }
 
+.modified-task-input {
+  width: 70%;
+  padding: 1%;
+  font-size: 1.3em;
+  border-radius: 5px;
+  border: 1px #606470 solid;
+}
+
 .bi-plus-circle {
   color: rgb(11, 113, 179);
   margin-left: 2%;
   flex-shrink: 0;
+  transition: transform.5s;
+}
+
+.bi-plus-circle:hover {
+  transform: rotate(360deg);
 }
 
 .task {
@@ -95,7 +108,7 @@ main {
   padding-left: 0%;
 }
 
-.added-task {
+.task-field {
   width: 50%;
   font-size: 1.4em;
 }
@@ -181,7 +194,7 @@ main {
       padding: 2%;
     }
 
-    .added-task {
+    .task-field {
       width: 70%;
       font-size: 1.4em;
       padding-bottom: 2%;
