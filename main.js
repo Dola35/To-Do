@@ -21,12 +21,12 @@ function removeTaskBar() {
 
   /* removeEventListener; */
 }
-
+//markAsDone function
 function markAsDone(){
   const taskDone = this.parentNode;
   taskDone.parentNode.style.backgroundColor = "lightgreen";
 }
-
+//end of the markAsDone function
 
 
 function alertArrowButton() {
@@ -131,11 +131,11 @@ document.getElementById("add-task").onclick = function () {
     const downButtonsArray = Array.from(downButtons);
     downButtonsArray.forEach((button) => (button.onclick = alertArrowButton));
 
-
+    //markAsDone button
     const doneButtons = document.getElementsByClassName("done-button");
     const doneButtonsArray = Array.from(doneButtons);
     doneButtonsArray.forEach((button) => (button.onclick=markAsDone));
-
+    // end of the markAsDone button
 
 
   }
