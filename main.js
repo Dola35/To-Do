@@ -22,12 +22,11 @@ function removeTaskBar() {
   /* removeEventListener; */
 }
 //markAsDone function
-function markAsDone(){
+function markAsDone() {
   const taskDone = this.parentNode;
   taskDone.parentNode.style.backgroundColor = "lightgreen";
 }
 //end of the markAsDone function
-
 
 function alertArrowButton() {
   alert(
@@ -38,8 +37,11 @@ function alertArrowButton() {
 }
 
 document.getElementById("add-task").onclick = function () {
-  if (document.getElementById("new-task-input").value.length === 0) {
-    alert("Please Enter a Task");
+  if (
+    document.getElementById("new-task-input").value.length === 0 ||
+    document.getElementById("new-task-input").value.length > 40
+  ) {
+    alert("Please Enter a Task or max length exceeded");
   } else {
     document.querySelector(".task-list").innerHTML += `
           <li class="task">
@@ -134,9 +136,7 @@ document.getElementById("add-task").onclick = function () {
     //markAsDone button
     const doneButtons = document.getElementsByClassName("done-button");
     const doneButtonsArray = Array.from(doneButtons);
-    doneButtonsArray.forEach((button) => (button.onclick=markAsDone));
+    doneButtonsArray.forEach((button) => (button.onclick = markAsDone));
     // end of the markAsDone button
-
-
   }
 };
