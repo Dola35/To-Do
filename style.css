@@ -13,6 +13,7 @@
   background-color: lightblue;
   display: flex;
   flex-wrap: nowrap;
+  border-bottom: 1px rgb(11, 113, 179) solid;
 }
 
 #header {
@@ -41,6 +42,12 @@ h1,
   width: 20%;
 }
 
+main {
+  height: 100vh;
+  padding-top: 2%;
+  background-color: #455d7a;
+}
+
 #logo {
   width: 40%;
   min-width: 20%;
@@ -51,7 +58,7 @@ h1,
 .task-input-container {
   display: flex;
   width: 70%;
-  margin: 1% auto;
+  margin: 0 auto 1%;
   padding: 1.5% 0;
   justify-content: center;
   background-color: #bfdce6;
@@ -76,7 +83,7 @@ h1,
 .task {
   padding: 1%;
   width: 70%;
-  margin: auto;
+  margin: 0 auto 0.5%;
   display: flex;
   justify-content: center;
   background-color: #ffffff;
@@ -154,37 +161,37 @@ h1,
     margin: 0 auto;
   }
 
+  @media only screen and (max-width: 800px) {
+    .task-input-container {
+      padding: 2%;
+    }
 
-@media only screen and (max-width: 800px) {
-  .task-input-container {
-    padding: 2%;
-  }
+    .bi-plus-circle {
+      width: 7%;
+    }
 
-  .bi-plus-circle {
-    width: 7%;
-  }
+    .task-input {
+      font-size: 1em;
+      height: 3em;
+    }
 
-  .task-input {
-    font-size: 1em;
-    height: 3em;
-  }
+    .task {
+      flex-direction: column;
+      align-items: center;
+      padding: 2%;
+    }
 
-  .task {
-    flex-direction: column;
-    align-items: center;
-    padding: 2%;
-  }
+    .added-task {
+      width: 70%;
+      font-size: 1.4em;
+      padding-bottom: 2%;
+      text-align: center;
+    }
 
-  .added-task {
-    width: 70%;
-    font-size: 1.4em;
-    padding-bottom: 2%;
-    text-align: center;
-  }
-
-  .icon-container {
-    display: flex;
-    justify-content: center;
-    width: 50%;
+    .icon-container {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+    }
   }
 }

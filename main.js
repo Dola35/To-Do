@@ -21,6 +21,21 @@ function removeTaskBar() {
 
   /* removeEventListener; */
 }
+//markAsDone function
+function markAsDone(){
+  const taskDone = this.parentNode;
+  taskDone.parentNode.style.backgroundColor = "lightgreen";
+}
+//end of the markAsDone function
+
+
+function alertArrowButton() {
+  alert(
+    "We're still working on this feature! Please give us a couple more weeks of bootcamp to figure this one out."
+  );
+
+  /* removeEventListener; */
+}
 
 document.getElementById("add-task").onclick = function () {
   if (document.getElementById("new-task-input").value.length === 0) {
@@ -37,7 +52,7 @@ document.getElementById("add-task").onclick = function () {
                 width="10%"
                 height="100%"
                 fill="currentColor"
-                class="bi bi-check-square"
+                class="done-button bi bi-check-square"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -81,7 +96,7 @@ document.getElementById("add-task").onclick = function () {
                 width="10%"
                 height="100%"
                 fill="currentColor"
-                class="bi bi-arrow-up-circle-fill right-icon"
+                class="up-button bi bi-arrow-up-circle-fill right-icon"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -93,7 +108,7 @@ document.getElementById("add-task").onclick = function () {
                 width="10%"
                 height="100%"
                 fill="currentColor"
-                class="bi bi-arrow-down-circle-fill right-icon"
+                class="down-button bi bi-arrow-down-circle-fill right-icon"
                 viewBox="0 0 16 16"
               >
                 <path
@@ -107,5 +122,21 @@ document.getElementById("add-task").onclick = function () {
     const deleteButtons = document.getElementsByClassName("delete-button");
     const deleteButtonsArray = Array.from(deleteButtons);
     deleteButtonsArray.forEach((button) => (button.onclick = removeTaskBar));
+
+    const upButtons = document.getElementsByClassName("up-button");
+    const upButtonsArray = Array.from(upButtons);
+    upButtonsArray.forEach((button) => (button.onclick = alertArrowButton));
+
+    const downButtons = document.getElementsByClassName("down-button");
+    const downButtonsArray = Array.from(downButtons);
+    downButtonsArray.forEach((button) => (button.onclick = alertArrowButton));
+
+    //markAsDone button
+    const doneButtons = document.getElementsByClassName("done-button");
+    const doneButtonsArray = Array.from(doneButtons);
+    doneButtonsArray.forEach((button) => (button.onclick=markAsDone));
+    // end of the markAsDone button
+
+
   }
 };
