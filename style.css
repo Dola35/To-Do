@@ -87,10 +87,12 @@ main {
   margin-left: 2%;
   flex-shrink: 0;
   transition: transform.5s;
+
 }
 
 .bi-plus-circle:hover {
   transform: rotate(360deg);
+  cursor: pointer;
 }
 
 .task {
@@ -125,16 +127,19 @@ main {
 
 .bi-check-square {
   color: green;
+  cursor: pointer;
 }
 
 .bi-pencil-square,
 .bi-arrow-up-circle-fill,
 .bi-arrow-down-circle-fill {
   color: rgb(11, 113, 179);
+  cursor: pointer;
 }
 
 .bi-trash3-fill {
   color: #aa0000;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 1500px) {
